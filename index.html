@@ -4,25 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css.css">
-  <script defer src="function.js"></script>
+  <!-- <script defer src="function.js"></script> -->
   <title>Wenwu</title>
 </head>
 <center><body>
   
     <h1 classe="p.red" class="text">my work in html</h1>
-  <p ><span style="color:#FF4500"><p><h2>Akashi Seiguro</h2></p></span></p>
+    <button class="text" id="sonne">click</button>
+  <p><span><p><h2 id="change" class="text">Akashi Seiguro</h2></p></span></p>
   <img src="1573302701_akashi runin.gif" \>
   <h3 class="text"><p>ссылка на вход GitHub</p></h3>
  <p><a class="text" href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Flogin%2Fdevice">github</a></p>
  <p class="text">Практика:</p>
- <h3 align="right"><P><MARQUEE scrollDelay=28 behavior=alternate bgCOlor="0000" height=66><font color ="#ff0000">это моя любимая песенка</font></MARQUEE></B></FONT face=Arial size=4></P></h3>
+ <h3 align="right" ><P><MARQUEE scrollDelay=28 behavior=alternate bgCOlor="0000" height=66><font class="text">это моя любимая песенка</font></MARQUEE></B></FONT face=Arial size=4></P></h3>
  <p><U><MARQUEE>Привет! Это моя первая страничка!</MARQUEE></U></p>
     <p align="left">В лесу родилась <b>елочка</b>. В лесу она росла.</p>
     <p align="right">Зимой и летом стройная, зеленая была.</p>
     <p align="justify">
       Метель ей пела песенку: "спи <b>елочка</b>, бай-бай."Мороз снежком укутывал:
       <font size="5">смотри, не замерзай!"</font>
-      <table>
+      <table class="text" id="tab">
         <tr>
             <td>вопросы</td>
             <td>ответы</td>
@@ -62,4 +63,36 @@
                 <td>через пробел</td>
       </tr>
     </table>
+    <script>
+      let button=document.getElementById("sonne")
+      let texts=document.querySelectorAll(".text")
+      let table=document.getElementById("tab")
+      let td=document.querySelectorAll("td")
+      let gif=document.querySelector("img")
+      let changeText=document.getElementById("change")
+      button.addEventListener(`mouseover`,change)
+      function change(event){
+        for (let i=0;texts.length>i;i++){
+          texts[i].style.color="white"
+        }
+        for (let i=0;td.length>i;i++){
+          td[i].style.borderColor="white"
+        }
+        table.style.borderColor="white"
+        gif.src="spot.gif"
+        changeText.textContent="the spot"
+      }
+      button.addEventListener(`mouseout`,changeAkashi)
+      function changeAkashi(event){
+        for (let i=0;texts.length>i;i++){
+          texts[i].style.color="#811111"
+        }
+        for (let i=0;td.length>i;i++){
+          td[i].style.borderColor="#811111"
+        }
+        table.style.borderColor="#811111"
+        gif.src="1573302701_akashi runin.gif"
+        changeText.textContent="Akashi Seiguro"
+      }
+    </script>
 </body></center>
