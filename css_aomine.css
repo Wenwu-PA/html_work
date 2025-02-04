@@ -1,0 +1,15 @@
+.text1 {
+  background-color: rgb(16, 4, 60);
+  color: #0b5b98;
+  font-style: fantasy;
+  font-variant: var(color);
+}
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 50px;
+  background-color: #041143;
+  color: #e6dfdf;
+  font-family: "Roboto", sans-serif;
+}
